@@ -46,29 +46,94 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
 
+    <style>
+      body{
+        min-height:100vh;
+      }
+
+      .lds-ellipsis {
+        display: inline-block;
+        position: relative;
+        width: 64px;
+        height: 64px;
+        margin-top: .3rem;
+      }
+      .lds-ellipsis div {
+        position: absolute;
+        top: 27px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        /* background: #212529; */
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+      .lds-ellipsis div:nth-child(1) {
+        background-color: #d4ecc9;
+        left: 6px;
+        animation: lds-ellipsis1 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(2) {
+        background-color: #a2d895;
+        left: 6px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(3) {
+        background-color: #75b34c;
+        left: 26px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(4) {
+        background-color: #c3d582;
+        left: 45px;
+        animation: lds-ellipsis3 0.6s infinite;
+      }
+      @keyframes lds-ellipsis1 {
+        0% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes lds-ellipsis3 {
+        0% {
+                transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+      @keyframes lds-ellipsis2 {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(19px, 0);
+        }
+      }
+
+    </style>
+
 </head>
 
 <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-6">
-          <h1>
-            Testing
-          </h1>
-        </div>
+  <div class="container">
+    <div class="row w-100 justify-content-center align-items-center" style="height:100vh;">
+      <div class="col-12 col-lg-6 text-center d-flex align-self-center">
+        <h1 class="d-block d-sm-flex">Coming Soon</h1><div class="d-block d-sm-flex lds-ellipsis"><div></div><div></div><div></div><div></div></div>
       </div>
-      
     </div>
+  </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    
-    <script src="js/bootstrap.min.js" ></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  
+  <script src="js/bootstrap.min.js" ></script>
 
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <!-- <script type="text/javascript">
-        app.initialize();
-    </script> -->
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <!-- <script type="text/javascript">
+      app.initialize();
+  </script> -->
 </body>
 
 </html>
